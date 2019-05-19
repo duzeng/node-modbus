@@ -56,6 +56,10 @@ class ModbusClientRequestHandler {
     this._clearAllRequests()
   }
 
+  online(){
+    this._state = 'online'
+  }
+  
   /** Register a new request.
    * @param {RequestBody} requestBody A request body to execute a modbus function.
    * @returns {Promise} A promise to handle the request outcome.

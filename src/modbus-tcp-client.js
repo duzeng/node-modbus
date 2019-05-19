@@ -45,6 +45,10 @@ class ModbusTCPClient extends ModbusClient {
     this._requestHandler = new ModbusTCPClientRequestHandler(this._socket, this._unitId, timeout)
     this._responseHandler = new ModbusTCPClientResponseHandler()
   }
+
+  online(){
+    this._requestHandler.online();
+  }
 }
 
 module.exports = ModbusTCPClient
